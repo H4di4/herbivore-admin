@@ -133,7 +133,7 @@ export default function BlogPostForm() {
                     id="title"
                     {...register("title", { required: "Title is required" })}
                     placeholder="Enter blog post title"
-                    className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2"
+                    className="mt-1 block w-full border border-gray-300 px-4 py-2"
                 />
                 {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title.message}</p>}
             </div>
@@ -150,7 +150,7 @@ export default function BlogPostForm() {
                         }
                     })}
                     placeholder="url-friendly-slug"
-                    className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2"
+                    className="mt-1 block w-full border border-gray-300  px-4 py-2"
                 />
                 {errors.slug && <p className="text-red-500 text-sm mt-1">{errors.slug.message}</p>}
             </div>
@@ -164,7 +164,7 @@ export default function BlogPostForm() {
                         maxLength: { value: 250, message: "Max 250 characters" }
                     })}
                     placeholder="Short summary (1-2 sentences)"
-                    className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2"
+                    className="mt-1 block w-full border border-gray-300  px-4 py-2"
                 />
                 <p className="text-sm text-gray-500">Words : {wordCount.excerpt}</p>
                 {errors.excerpt && <p className="text-red-500 text-sm mt-1">{errors.excerpt.message}</p>}
@@ -199,7 +199,7 @@ export default function BlogPostForm() {
                     id="tags"
                     {...register("tags")}
                     placeholder="e.g., react, blog, node"
-                    className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2"
+                    className="mt-1 block w-full border border-gray-300  px-4 py-2"
                 />
             </div>
 
@@ -216,7 +216,7 @@ export default function BlogPostForm() {
 
                 <div className="flex gap-2 mt-2 flex-wrap">
                     {imagePreviews.map((src, index) => (
-                        <img key={index} src={src} alt={`preview-${index}`} className="w-24 h-24 object-cover rounded" />
+                        <img key={index} src={src} alt={`preview-${index}`} className="w-24 h-24 object-cover " />
                     ))}
                 </div>
             </div>
@@ -226,7 +226,7 @@ export default function BlogPostForm() {
                 <select
                     id="status"
                     {...register("status")}
-                    className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2"
+                    className="mt-1 block w-full border border-gray-300  px-4 py-2"
                 >
                     <option value="draft">Draft</option>
                     <option value="published">Published</option>
@@ -239,7 +239,7 @@ export default function BlogPostForm() {
                     id="publishedAt"
                     type="date"
                     {...register("publishedAt")}
-                    className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2"
+                    className="mt-1 block w-full border border-gray-300  px-4 py-2"
                 />
             </div>
 

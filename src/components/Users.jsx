@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import api from '../utils/api';
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -8,8 +9,8 @@ function Users() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    axios
-      .get('http://localhost:5000/api/user/all', {
+    api
+      .get('user/all', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(res => {
